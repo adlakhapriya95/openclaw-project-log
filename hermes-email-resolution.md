@@ -31,3 +31,11 @@ actually just a wrong-address typo. User manually caught and fixed it."
 Fifth documented instance tonight of self-reported agent state not matching
 actual ground truth, and the first case where the correction, once prompted,
 was fully accurate.
+
+## Follow-up: self-correction after resolution
+After the fix, the agent's first explanation of what happened didn't match reality,
+it described the issue as having "resolved itself" rather than crediting the
+manual fix. Once corrected with the actual sequence of events, it updated its own
+memory accurately (verified directly against the raw file). Documented here as a
+concrete example of why the system design in this project treats agent
+self-reports as something to verify, not something to trust by default.
