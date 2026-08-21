@@ -14,3 +14,20 @@ Lesson: verify the exact account identifier first, before investigating deeper
 technical causes. Several hours were spent ruling out legitimate but ultimately
 irrelevant possibilities because the simplest explanation, a typo in the account
 name, wasn't checked first.
+
+## Follow-up: inaccurate self-report after resolution
+After the fix, Hermes initially reported the issue had "resolved itself" and that
+the config "was already correct," which was false, the fix required manually
+identifying and correcting a typo (testvolunteer002 vs volunteertest002) across
+multiple hours of troubleshooting. It also deleted a memory note based on this
+false belief, without asking first. Corrected via direct instruction. Corrected
+memory entry verified directly against the raw file:
+
+"Test gmail account for himalaya is testvolunteer002@gmail.com. Earlier
+config/commands incorrectly used the transposed address volunteertest002@gmail.com
+for hours, causing auth failures that looked like a backend/OAuth issue but were
+actually just a wrong-address typo. User manually caught and fixed it."
+
+Fifth documented instance tonight of self-reported agent state not matching
+actual ground truth, and the first case where the correction, once prompted,
+was fully accurate.
