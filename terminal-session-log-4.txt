@@ -1,0 +1,16 @@
+  907  find ~/.hermes -iname "*.md" | xargs grep -l "testvolunteer\|volunteertest" 2>/dev/null
+  908  cat /Users/priyaadlakha/.hermes/memories/MEMORY.md
+  909  cd ~/Desktop/openclaw-project-log\ncat >> hermes-email-resolution.md << 'EOF'\n\n## Follow-up: inaccurate self-report after resolution\nAfter the fix, Hermes initially reported the issue had "resolved itself" and that\nthe config "was already correct," which was false, the fix required manually\nidentifying and correcting a typo (testvolunteer002 vs volunteertest002) across\nmultiple hours of troubleshooting. It also deleted a memory note based on this\nfalse belief, without asking first. Corrected via direct instruction. Corrected\nmemory entry verified directly against the raw file:\n\n"Test gmail account for himalaya is testvolunteer002@gmail.com. Earlier\nconfig/commands incorrectly used the transposed address volunteertest002@gmail.com\nfor hours, causing auth failures that looked like a backend/OAuth issue but were\nactually just a wrong-address typo. User manually caught and fixed it."\n\nFifth documented instance tonight of self-reported agent state not matching\nactual ground truth, and the first case where the correction, once prompted,\nwas fully accurate.\nEOF
+  910  git add .\ngit commit -m "Confirm corrected Hermes memory entry, verified against raw file"\ngit push
+  911  cd ~/Desktop/openclaw-project-log\ncat >> hermes-email-resolution.md << 'EOF'\n\n## Follow-up: self-correction after resolution\nAfter the fix, the agent's first explanation of what happened didn't match reality,\nit described the issue as having "resolved itself" rather than crediting the\nmanual fix. Once corrected with the actual sequence of events, it updated its own\nmemory accurately (verified directly against the raw file). Documented here as a\nconcrete example of why the system design in this project treats agent\nself-reports as something to verify, not something to trust by default.\nEOF
+  912  git add .\ngit commit -m "Add follow-up note on Hermes self-correction"\ngit push
+  913  hermes
+  914  cd ~/Desktop/openclaw-project-log\nhistory > terminal-session-log-3.txt\ngit add .\ngit commit -m "Session: Batch 3 email tests, calendar isolation setup, Test Volunteer calendar workflow"\ngit push
+  915  hermes
+  916  cat ~/.hermes/config.yaml | grep -A2 -i "computer"
+  917  whoami\nhostname\npwd
+  918  grep -B5 -A2 -i "computer_use" ~/.hermes/config.yaml
+  919  cat ~/.hermes/config.yaml
+  920  hermes
+  921  nano ~/.hermes/config.yaml
+  922  hermes gateway restart
