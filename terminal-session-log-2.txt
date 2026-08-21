@@ -1,0 +1,16 @@
+  887  security add-generic-password -U -a volunteertest002@gmail.com -s himalaya-gmail-test002 -w "uoub rljr shjm hqqf"
+  888  himalaya -a volunteertest002 account check
+  889  security add-generic-password -U -a volunteertest002@gmail.com -s himalaya-gmail-test002 -w "uoubrljrshjmhqqf"
+  890    himalaya -a volunteertest002 account check
+  891  security find-generic-password -a volunteertest002@gmail.com -s himalaya-gmail-test002 -w
+  892  myaccount.google.com/security
+  893  himalaya -a volunteertest002 account check
+  894  nano ~/.config/himalaya/config.toml
+  895  security add-generic-password -U -a testvolunteer002@gmail.com -s himalaya-gmail-test002 -w "uoubrljrshjmhqqf"
+  896  himalaya -a testvolunteer002 account check
+  897  himalaya -a volunteertest002 account check
+  898  cat ~/.config/himalaya/config.toml
+  899  nano ~/.config/himalaya/config.toml
+  900  himalaya -a volunteertest002 account check
+  901  nano ~/.config/himalaya/config.toml
+  902  himalaya -a volunteertest002 account check
