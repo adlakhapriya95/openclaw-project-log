@@ -1,0 +1,16 @@
+  917  whoami\nhostname\npwd
+  918  grep -B5 -A2 -i "computer_use" ~/.hermes/config.yaml
+  919  cat ~/.hermes/config.yaml
+  920  hermes
+  921  nano ~/.hermes/config.yaml
+  922  hermes gateway restart
+  923  cd ~/Desktop/openclaw-project-log\nhistory > terminal-session-log-4.txt\ncat > computer-use-incident.md << 'EOF'\n# Computer Use / Accessibility Access Incident\n\nDuring calendar setup, an Accessibility Access request from "CuaDriver" appeared\nunexpectedly and was denied. Investigation traced this to Hermes's computer_use\ntool, which had been deselected in the setup wizard earlier but was found, via\ndirect inspection of ~/.hermes/config.yaml, to still be listed as active in\nplatform_toolsets.cli. The wizard deselection did not take effect.\n\nSeparately, the agent's own account of its actions during the calendar permission\nflow (two read-only "capture" calls plus one "open" command, no click action) was\nchecked directly against the raw tool-call trace and found to be accurate, unlike\nearlier findings this session (the fabricated cron job, the false "resolved itself"\nclaim), this explanation held up under independent verification.\n\nAction taken: computer_use manually removed from the active toolset in config.yaml,\nconfirmed removed via direct file inspection, verified again after restart.\n\nLesson: a setup wizard's displayed selections do not necessarily match the actual\nresulting configuration; the only reliable check is the raw config file itself.\nEOF\ngit add .\ngit commit -m "Disable computer_use after config verification; document incident and resolution"\ngit push
+  924  git log --oneline
+  925  hermes
+  926  cat ~/.hermes/memories/MEMORY.md
+  927  cat ~/.hermes/memories/MEMORY.md
+  928  hermes
+  929  cat ~/.hermes/memories/MEMORY.md
+  930  hermes
+  931  himalaya -a volunteertest002 envelope list
+  932  hermes
