@@ -1,0 +1,16 @@
+  964  find ~/.openclaw/lobster-source -iname "openclaw.plugin.json"
+  965  nano ~/.openclaw/lobster-source/openclaw.plugin.json
+  966  rm -rf ~/.openclaw/extensions/@clawdbot-lobster-eb0c8f8d5d\nopenclaw plugins install ~/.openclaw/lobster-source
+  967  nano ~/.openclaw/lobster-source/openclaw.plugin.json
+  968  rm -rf ~/.openclaw/extensions/@clawdbot-lobster-eb0c8f8d5d\nopenclaw plugins install ~/.openclaw/lobster-source
+  969  openclaw gateway restart
+  970  openclaw plugins list
+  971  openclaw
+  972  find ~/.openclaw/lobster-source/src -iname "*openclaw*"
+  973  find ~/.openclaw/lobster-source/src -iname "*plugin*"
+  974  find ~/.openclaw/lobster-source/src -iname "*register*"
+  975  ls ~/.openclaw/lobster-source/bin/
+  976  node ~/.openclaw/lobster-source/bin/lobster.js --help
+  977  sudo ln -s ~/.openclaw/lobster-source/bin/lobster.js /usr/local/bin/lobster\nchmod +x ~/.openclaw/lobster-source/bin/lobster.js\nlobster version
+  978  lobster doctor
+  979  openclaw
