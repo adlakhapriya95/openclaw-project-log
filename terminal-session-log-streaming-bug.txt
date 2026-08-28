@@ -1,0 +1,16 @@
+ 1023  openclaw config schema | grep -i "stream" -A3 -B3
+ 1024  openclaw config set agents.defaults.model.streaming false
+ 1025  openclaw config get agents.defaults.model
+ 1026  openclaw config get models.providers.anthropic
+ 1027  cat ~/.openclaw/openclaw.json
+ 1028  openclaw config set agents.defaults.models."anthropic/claude-sonnet-5".streaming false
+ 1029  openclaw config get agents.defaults.models
+ 1030  openclaw gateway restart
+ 1031  echo '{"test":"data"}' | lobster llm.invoke --provider openclaw --model anthropic/claude-sonnet-5 --prompt "Say the word hello and nothing else"
+ 1032  tail -n 6 /tmp/openclaw/openclaw-2026-08-28.log
+ 1033  tail -n 6 /tmp/openclaw/openclaw-2026-08-28.log
+ 1034  lobster help llm.invoke
+ 1035  export LOBSTER_LLM_ADAPTER_URL=https://api.anthropic.com/v1/messages\nexport LOBSTER_LLM_ADAPTER_TOKEN=[your real Anthropic API key, the one already registered earlier tonight]
+ 1036  export LOBSTER_LLM_ADAPTER_URL=https://api.anthropic.com/v1/messages\nexport LOBSTER_LLM_ADAPTER_TOKEN=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
+ 1037  echo '{"test":"data"}' | lobster llm.invoke --provider http --model claude-sonnet-5 --prompt "Say the word hello and nothing else"
+ 1038  lobster help llm.invoke
