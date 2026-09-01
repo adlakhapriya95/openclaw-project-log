@@ -1,0 +1,16 @@
+ 1069  claude auth login
+ 1070  claude auth status
+ 1071  openclaw gateway restart
+ 1072  openclaw
+ 1073  himalaya -a gmail envelope list --json | jq -r '.envelopes[] | "\(.id) \(.subject) \(.date)"' | sort -rn | head -20
+ 1074  himalaya -a gmail envelope list --folder "[Gmail]/Sent" --json | jq -r '.envelopes[] | "\(.id) \(.subject) \(.date)"'
+ 1075  himalaya -a gmail envelope list -m "[Gmail]/Sent" --json | jq -r '.envelopes[] | "\(.id) \(.subject) \(.date)"'
+ 1076  himalaya -a gmail mailboxes
+ 1077  himalaya -a gmail mailbox list
+ 1078  himalaya -a gmail envelope list -m "[Gmail]/Sent Mail" --json | jq -r '.envelopes[] | "\(.id) \(.subject) \(.date)"'
+ 1079  himalaya -a gmail envelope list -m "[Gmail]/Drafts" --json | jq -r '.envelopes[] | "\(.id) \(.subject) \(.date)"'
+ 1080  OPENCLAW
+ 1081  claude auth status
+ 1082  claude auth login
+ 1083  claude auth status
+ 1084  openclaw
