@@ -9,17 +9,26 @@ No numbers are invented. Sample sizes are shown explicitly since OpenClaw's
 current log retention window is much smaller than Hermes's full history.
 """
 import sqlite3
+import time
 from pathlib import Path
 
 import pandas as pd
 import streamlit as st
+from streamlit_autorefresh import st_autorefresh
 
 st.set_page_config(page_title="OpenClaw vs Hermes: Usage Dashboard", layout="wide")
 
+# Auto-refresh the page every 30 seconds so new data appears without
+# manually reloading. This only re-reads the databases; it does not
+# re-parse the raw logs itself, that still needs the background parser
+# loop (see run_live.sh) to keep openclaw_usage.db up to date.
+st_autorefresh(interval=30_000, key="usage_dashboard_refresh")
+
 OPENCLAW_DB = Path("openclaw_usage.db")
-HERMES_DB = Path.home() / ".hermes" / "state.db"
+HERMES_DB = Path("hermes_state.db")
 
 st.title("OpenClaw vs Hermes: Real Usage Comparison")
+st.caption(f"Last refreshed: {time.strftime('%Y-%m-%d %H:%M:%S')} (auto-refreshes every 30s)")
 st.caption(
     "Every number here comes directly from each tool's own logs or database. "
     "No figure is estimated except where explicitly labeled 'estimated'."
